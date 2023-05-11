@@ -1,6 +1,6 @@
 # @revam/chinese-numeral-conversion
 
-[![npm version](https://badge.fury.io/js/@revam/chinese-numeral-conversion.svg)](https://www.npmjs.com/package/@revam/chinese-numeral-conversion)
+[![npm version](https://badge.fury.io/js/@revam%2Fchinese-numeral-conversion.svg)](https://badge.fury.io/js/@revam%2Fchinese-numeral-conversion)
 
 A package for converting numerals between chinese words and numbers, with
 support for different numeral label sets (such as Traditional Chinese and
