@@ -1,0 +1,7 @@
+*
+!package.json
+!readme.md
+!license.txt
+!*.d.ts
+!*.js
+!*.cjs

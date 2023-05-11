@@ -1,0 +1,36 @@
+{
+  "name": "@revam/chinese-numeral-conversion",
+  "version": "1.0.0",
+  "description": "A package for numeral conversion.",
+  "type": "module",
+  "exports": {
+      ".": {
+          "import": "./index.js",
+          "require": "./commonjs/index.cjs"
+      }
+  },
+  "main": "index.js",
+  "module": "index.mjs",
+  "types": "index.d.ts",
+  "scripts": {
+    "build:dts": "tsc -p . --noEmit false --declaration true --emitDeclarationOnly true --removeComments false",
+    "build:cjs": "tsc -p . --noEmit false --module CommonJS && find . -type f -not -path \"./node_modules/*\" -name \"*.js\" -print0 | xargs -0 -I {} sh -c 'mv \"$1\" \"${1%.js}.cjs\"' _ {}",
+    "build:mjs": "tsc -p . --noEmit false",
+    "build": "npm run lint && npm run build:dts && npm run build:cjs && npm run build:mjs",
+    "prepublishOnly": "npm run build",
+    "lint": "tsc -p ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/revam/node-chinese-numeral-conversion.git"
+  },
+  "author": "Mikal Stordal mikalstordal@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/revam/node-chinese-numeral-conversion/issues"
+  },
+  "homepage": "https://github.com/revam/node-chinese-numeral-conversion#readme",
+  "devDependencies": {
+    "typescript": "^5.0.4"
+  }
+}
