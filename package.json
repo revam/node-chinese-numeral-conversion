@@ -6,7 +6,7 @@
   "exports": {
       ".": {
           "import": "./index.js",
-          "require": "./commonjs/index.cjs"
+          "require": "./index.cjs"
       }
   },
   "main": "index.js",
